@@ -16,15 +16,4 @@ use App\Http\Controllers\ComicController as ComicController;
 
 Route::get('/', [ComicController::class, 'index']);
 
-Route::get('/detail/{id}', function($id){
-    $comics = config('db');
-
-    foreach($comics as $key => $comic){
-
-        if($key == $id){
-            $single = $comic;
-        }
-    }
-    
-    return view('detail_comic', compact('single'));
-})->name('detail-comic');
+Route::get('/detail/{id}', [ComicController::class, 'detail'])->name('detail-comic');

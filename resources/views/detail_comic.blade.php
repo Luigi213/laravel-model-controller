@@ -37,9 +37,7 @@
                         <p>Art by:</p>                    
                     </div>
                     <div class="col-8">
-                        @foreach ($single['artists'] as $asrtist)
-                        <a href="/">{{ $asrtist }},</a>                                            
-                        @endforeach
+                        {{ $single['artists'] }}
                     </div>
                 </div>
                 <hr class="text-secondary">
@@ -48,9 +46,7 @@
                         <p>Written by:</p>                    
                     </div>
                     <div class="col-8">
-                        @foreach ($single['writers'] as $writer)
-                        <a href="/">{{ $writer }},</a>                                            
-                        @endforeach
+                        {{ $single['writers'] }}
                     </div>
                 </div>
             </div>

@@ -13,4 +13,10 @@ class ComicController extends Controller
 
         return view('home', compact('comics'));
     }
+
+    public function detail($id){
+        $single = Comic::find($id + 1);
+
+        return view('detail_comic', compact('single'));
+    }
 }
