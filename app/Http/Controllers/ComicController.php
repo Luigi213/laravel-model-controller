@@ -15,7 +15,9 @@ class ComicController extends Controller
     }
 
     public function detail($id){
-        $single = Comic::find($id + 1);
+        $comics = Comic::where('id', '=' , $id + 1)->get();
+
+        $single = $comics[0];
 
         return view('detail_comic', compact('single'));
     }
