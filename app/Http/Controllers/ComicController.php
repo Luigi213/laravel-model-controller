@@ -14,7 +14,7 @@ class ComicController extends Controller
         return view('home', compact('comics'));
     }
 
-    public function detail($slug){
+    public function show($slug){
         $comics = Comic::where('slug', '=', $slug)->get();
 
         $single = $comics[0];

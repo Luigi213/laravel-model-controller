@@ -16,4 +16,4 @@ use App\Http\Controllers\ComicController as ComicController;
 
 Route::get('/', [ComicController::class, 'index']);
 
-Route::get('/detail/{slug}', [ComicController::class, 'detail'])->name('detail-comic');
+Route::get('/detail/{slug}', [ComicController::class, 'show'])->name('detail-comic');
